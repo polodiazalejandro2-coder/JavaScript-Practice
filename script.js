@@ -29,10 +29,27 @@ function calculateSqrt() {
 
     if (number < 0) {
         sqrtResult.textContent = "No se puede calcular la raíz cuadrada de un número negativo.";
-    } else {
+    }else if (isNaN(number)) {
+        sqrtResult.textContent = "Por favor, ingrese un número válido.";
+    } 
+    else {
         sqrtResult.textContent = `La raíz cuadrada de ${number} es ${Math.sqrt(number)}.`;
     }
 }
 // Exercise 4 Cambio de color -->
 // Exercise 5 Altura y ancho de una imagen -->
+function cambiatamaño(){
+    let ancho = document.getElementById("width").value;
+    let alto = document.getElementById("height").value;
+    let fihimg = document.getElementById("image");
+    if (alto > 400){
+        alto = 400
+    }
+    if (ancho > 800){
+        ancho = 800
+    }
+    fihimg.style.height = alto + "px";
+    fihimg.style.width = ancho + "px";
+
+}
 // Exercise 6 Gestion de los pedidos de una cafeteria -->
